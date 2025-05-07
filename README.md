@@ -22,30 +22,30 @@ Windows üzerinde birden fazla Java JDK sürümünü kolayca indirip geçiş yap
 
 ## ⚠️ Yönetici Olarak Çalıştırma Gereksinimi
 
-Uygulamanın düzgün çalışabilmesi için PowerShell'i **Yönetici olarak** çalıştırmanız gerekmektedir. Bunun için, PowerShell üzerine sağ tıklayın ve **"Run as Administrator"** seçeneğini tıklayın.
+Uygulamanın düzgün çalışabilmesi için PowerShell'i **Yönetici olarak** çalıştırmanız gerekmektedir.
 
 ## 🛠️ PowerShell Script Çalıştırma İzni Verme
 
-Windows PowerShell script'lerinin çalışabilmesi için, `RemoteSigned` Execution Policy ayarını yapmanız gerekmektedir. Bunu aşağıdaki komut ile yapabilirsiniz:
+Windows PowerShell script'lerinin çalışabilmesi için, `Unrestricted` Execution Policy ayarını yapmanız gerekmektedir. Bunu aşağıdaki komutu PowerShell'e ile yapabilirsiniz:
 
 ```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
 ## 🚀 Kurulum
 
-1. Bu repoyu klonlayın ya da sadece `JDKSelectorV1.ps1` dosyasını indirin.
+1. `JDKSelectorV1.ps1` dosyasını indirin.
 2. Çalıştırmak için:
-   - Dosyaya sağ tıklayıp **“Run with PowerShell”** seçeneğini kullanın, ya da
-   - PowerShell terminalinden aşağıdaki komutu çalıştırın:
+   - PowerShell'i **Yönetici olarak** çalıştırdıktan sonra, dosyanın olduğu dizine gidip aşağıdaki komutları sırasıyla çalıştırın:
+
+     ```powershell
+     cd "dosyanın/olduğu/dizin"
+       ```
      ```powershell
      ./JDKSelectorV1.ps1
      ```
 
-## 🧪 Örnek Kullanım
+## ⚡ Alternatif Yöntem: JDKSelectorWrapper.bat
+Eğer PowerShell script'inin Set-ExecutionPolicy ayarlarıyla uğraşmak istemiyorsanız ve yönetici olarak çalıştırma ile ilgili bir sorun yaşamak istemiyorsanız, JDKSelectorWrapper.bat dosyasını indirip aynı klasörde bulundurabilirsiniz. Bu .bat dosyasını Yönetici olarak çalıştırarak PowerShell script'inizi kolayca başlatabilirsiniz.
 
-```powershell
-> jdk list
-> install jdk 17
-> use jdk 17
-```
+
