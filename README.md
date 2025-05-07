@@ -1,6 +1,6 @@
 # ☕ JDK-Selector
 
-Windows üzerinde birden fazla Java JDK sürümünü kolayca indirip geçiş yapmanı sağlayan hafif ve pratik bir PowerShell aracı. Sürümler Adoptium (eski adıyla AdoptOpenJDK) üzerinden indirilir.<
+Windows üzerinde birden fazla Java JDK sürümünü kolayca indirip geçiş yapmanı sağlayan hafif ve pratik bir PowerShell aracı. Sürümler Adoptium (eski adıyla AdoptOpenJDK) üzerinden indirilir.
 
 ## 🖼️ Ekran Görüntüsü
 ![JDK Switcher Kullanım Görseli](https://github.com/user-attachments/assets/c74dbc98-c637-40ee-96eb-1f8d69c667b7)
