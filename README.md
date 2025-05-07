@@ -20,6 +20,18 @@ Windows üzerinde birden fazla Java JDK sürümünü kolayca indirip geçiş yap
 - PowerShell 5.1+ veya PowerShell Core 7+
 - `curl` komutu (Windows 10+ sürümlerde yerleşik olarak gelir)
 
+## ⚠️ Yönetici Olarak Çalıştırma Gereksinimi
+
+Uygulamanın düzgün çalışabilmesi için PowerShell'i **Yönetici olarak** çalıştırmanız gerekmektedir. Bunun için, PowerShell üzerine sağ tıklayın ve **"Run as Administrator"** seçeneğini tıklayın.
+
+## 🛠️ PowerShell Script Çalıştırma İzni Verme
+
+Windows PowerShell script'lerinin çalışabilmesi için, `RemoteSigned` Execution Policy ayarını yapmanız gerekmektedir. Bunu aşağıdaki komut ile yapabilirsiniz:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## 🚀 Kurulum
 
 1. Bu repoyu klonlayın ya da sadece `JDKSelectorV1.ps1` dosyasını indirin.
@@ -36,3 +48,4 @@ Windows üzerinde birden fazla Java JDK sürümünü kolayca indirip geçiş yap
 > jdk list
 > install jdk 17
 > use jdk 17
+```
