@@ -26,26 +26,23 @@ Uygulamanın düzgün çalışabilmesi için PowerShell'i **Yönetici olarak** �
 
 ## 🛠️ PowerShell Script Çalıştırma İzni Verme
 
-Windows PowerShell script'lerinin çalışabilmesi için, `Unrestricted` Execution Policy ayarını yapmanız gerekmektedir. Bunu aşağıdaki komutu PowerShell'e ile yapabilirsiniz:
+Windows PowerShell script'lerinin çalışabilmesi için Execution Policy ayarını yapmanız gerekmektedir. 
 
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-```
+## 🚀 Çalıştırma
 
-## 🚀 Kurulum
+1. `JDKSelector.ps1` dosyasını indirin.
 
-1. `JDKSelectorV1.ps1` dosyasını indirin.
 2. Çalıştırmak için:
-   - PowerShell'i **Yönetici olarak** çalıştırdıktan sonra, dosyanın olduğu dizine gidip aşağıdaki komutları sırasıyla çalıştırın:
+   - PowerShell'i **Yönetici olarak** çalıştırın.
+   - Ardından dosyanın bulunduğu dizine gidip aşağıdaki komutu çalıştırın:
 
      ```powershell
-     cd "dosyanın/olduğu/dizin"
-       ```
-     ```powershell
-     ./JDKSelectorV1.ps1
+     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+     .\JDKSelector.ps1
      ```
+🔒 Bu komut yalnızca geçerli oturum için geçerlidir. Bilgisayarınızın güvenlik ayarlarında kalıcı bir değişiklik yapmaz.
 
 ## ⚡ Alternatif Yöntem: JDKSelectorWrapper.bat
-Eğer PowerShell script'inin Set-ExecutionPolicy ayarlarıyla uğraşmak istemiyorsanız ve yönetici olarak çalıştırma ile ilgili bir sorun yaşamak istemiyorsanız, JDKSelectorWrapper.bat dosyasını indirip aynı klasörde bulundurabilirsiniz. Bu .bat dosyasını Yönetici olarak çalıştırarak PowerShell script'inizi kolayca başlatabilirsiniz.
+JDKSelectorWrapper.bat dosyasını indirip aynı script ile aynı klasörde bulundurabilirsiniz. Bu .bat dosyasını Yönetici olarak çalıştırarak PowerShell script'inizi kolayca başlatabilirsiniz.
 
 
